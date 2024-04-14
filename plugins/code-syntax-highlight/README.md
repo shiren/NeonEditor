@@ -260,7 +260,7 @@ The way to include the plugin and the language files of `prismjs` is the same as
 ##### Use Option of Editor
 
 ```js
-const { Editor } = tosatui;
+const { Editor } = toastui;
 const { codeSyntaxHighlight } = Editor.plugin;
 
 const editor = Editor.factory({
