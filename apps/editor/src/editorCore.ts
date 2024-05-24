@@ -82,6 +82,7 @@ import { Pos } from '@t/toastmark';
  *     @param {boolean} [options.referenceDefinition=false] - whether use the specification of link reference definition
  *     @param {function} [options.customHTMLSanitizer=null] - custom HTML sanitizer
  *     @param {boolean} [options.previewHighlight=false] - whether highlight preview area
+ *     @param {boolean} [options.disallowDeepHeading=true] - whether disallow deep heading
  *     @param {boolean} [options.frontMatter=false] - whether use the front matter
  *     @param {Array.<object>} [options.widgetRules=[]] - The rules for replacing the text with widget node
  *     @param {string} [options.theme] - The theme to style the editor with. The default is included in toastui-editor.css.
@@ -151,6 +152,7 @@ class ToastUIEditorCore {
         customMarkdownRenderer: null,
         referenceDefinition: false,
         customHTMLSanitizer: null,
+        disallowDeepHeading: true,
         frontMatter: false,
         widgetRules: [],
         theme: 'light',
@@ -163,6 +165,7 @@ class ToastUIEditorCore {
       customHTMLRenderer,
       extendedAutolinks,
       referenceDefinition,
+      disallowDeepHeading,
       frontMatter,
       customMarkdownRenderer,
       useCommandShortcut,
@@ -204,6 +207,7 @@ class ToastUIEditorCore {
       customHTMLRenderer: deepMergedCopy(toHTMLRenderers, customHTMLRenderer),
       extendedAutolinks,
       referenceDefinition,
+      disallowDeepHeading,
       frontMatter,
       sanitizer: customHTMLSanitizer || sanitizeHTML,
     };
@@ -218,7 +222,7 @@ class ToastUIEditorCore {
       disallowedHtmlBlockTags: ['br', 'img'],
       extendedAutolinks,
       referenceDefinition,
-      disallowDeepHeading: true,
+      disallowDeepHeading,
       frontMatter,
       customParser: markdownParsers,
     });
