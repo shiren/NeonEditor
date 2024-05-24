@@ -810,6 +810,25 @@ describe('editor', () => {
         expect(getPreviewHTML()).toBe(result);
       });
 
+      it('should allow the nested seTextHeading in list', () => {
+        createEditor({
+          el: container,
+          initialValue: '- item1\n\t-',
+          previewHighlight: false,
+          disallowDeepHeading: false,
+        });
+
+        const result = oneLineTrim`
+          <ul>
+            <li>
+              <h2>item1</h2>
+            </li>
+          </ul>
+        `;
+
+        expect(getPreviewHTML()).toBe(result);
+      });
+
       it('should disallow the nested atxHeading in list', () => {
         createEditor({
           el: container,
@@ -821,6 +840,25 @@ describe('editor', () => {
           <ul>
             <li>
               <p># item1</p>
+            </li>
+          </ul>
+        `;
+
+        expect(getPreviewHTML()).toBe(result);
+      });
+
+      it('should allow the nested atxHeading in list', () => {
+        createEditor({
+          el: container,
+          initialValue: '- # item1',
+          previewHighlight: false,
+          disallowDeepHeading: false,
+        });
+
+        const result = oneLineTrim`
+          <ul>
+            <li>
+              <h1>item1</h1>
             </li>
           </ul>
         `;
@@ -845,6 +883,23 @@ describe('editor', () => {
         expect(getPreviewHTML()).toBe(result);
       });
 
+      it('should allow the nested seTextHeading in blockquote', () => {
+        createEditor({
+          el: container,
+          initialValue: '> item1\n> -',
+          previewHighlight: false,
+          disallowDeepHeading: false,
+        });
+
+        const result = oneLineTrim`
+          <blockquote>
+            <h2>item1</h2>
+          </blockquote>
+        `;
+
+        expect(getPreviewHTML()).toBe(result);
+      });
+
       it('should disallow the nested atxHeading in blockquote', () => {
         createEditor({
           el: container,
@@ -855,6 +910,23 @@ describe('editor', () => {
         const result = oneLineTrim`
           <blockquote>
             <p># item1</p>
+          </blockquote>
+        `;
+
+        expect(getPreviewHTML()).toBe(result);
+      });
+
+      it('should allow the nested atxHeading in blockquote', () => {
+        createEditor({
+          el: container,
+          initialValue: '> # item1',
+          previewHighlight: false,
+          disallowDeepHeading: false,
+        });
+
+        const result = oneLineTrim`
+          <blockquote>
+            <h1>item1</h1>
           </blockquote>
         `;
 
