@@ -182,6 +182,7 @@ export interface EditorOptions {
   referenceDefinition?: boolean;
   customHTMLSanitizer?: Sanitizer;
   previewHighlight?: boolean;
+  disallowDeepHeading?: boolean;
   frontMatter?: boolean;
   widgetRules?: WidgetRule[];
   theme?: string;
