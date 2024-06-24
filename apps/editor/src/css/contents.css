@@ -11,7 +11,7 @@
   color: #222;
   font-size: 13px;
   overflow-y: auto;
-  overflow-X: hidden;
+  overflow-x: hidden;
   height: calc(100% - 36px);
 }
 
