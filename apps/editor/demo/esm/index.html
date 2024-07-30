@@ -30,7 +30,7 @@
         '',
         '| name | type | description |',
         '| --- | --- | --- |',
-        '| el | `HTMLElement` | container element |',
+        '| el | `HTMLElement` | [@Widget](Widget) |',
         '',
         '## Features',
         '',
@@ -59,6 +59,19 @@
         extendedAutolinks: true,
         frontMatter: true,
         initialValue: content,
+        widgetRules: [
+          {
+            rule: /\[(@\S+)\]\((\S+)\)/,
+            toDOM(text) {
+              const rule = /\[(@\S+)\]\((\S+)\)/;
+              const matched = text.match(rule);
+              const span = document.createElement('span');
+        
+              span.innerHTML = `<a class="widget-anchor" href="${matched[2]}">${matched[1]}</a>`;
+              return span;
+            },
+          },
+        ],
       });
 
       window.editor = editor;
