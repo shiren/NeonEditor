@@ -411,7 +411,7 @@ function codeBlock(node) {
 
 ### Controlling Newlines
 
-In a normal situation, we don't need to care about formatting of converted HTML string. However, as the ToastMark support [CommonMark Spec](https://spec.commonmark.org/0.29/), the renderer supports an option to control new-lines to pass the [official test cases](https://spec.commonmark.org/0.29/spec.json).
+In a normal situation, we don't need to care about formatting of converted HTML string. However, as the ToastMark support [CommonMark Spec](https://spec.commonmark.org/0.31.2/), the renderer supports an option to control new-lines to pass the [official test cases](https://spec.commonmark.org/0.31.2/spec.json).
 
 The `outerNewline` and `innerNewline` property can be added to token objects to control white spaces. The following example will help you understand how to use these properties.
 

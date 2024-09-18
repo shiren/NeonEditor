@@ -4,7 +4,7 @@
 
 ### Autolinks
 
-The [Autolinks](https://spec.commonmark.org/0.29/#autolinks) is the CommonMark specification like as below. (If you want to know the detail specification of the Autolinks, refer to examples in the above link.)
+The [Autolinks](https://spec.commonmark.org/0.31.2/#autolinks) is the CommonMark specification like as below. (If you want to know the detail specification of the Autolinks, refer to examples in the above link.)
 > Autolinks are absolute URIs and email addresses inside `<` and `>`. They are parsed as `>` links, with the URL or email address as the link label.
 
 The functionality is available in TOAST UI Editor (henceforth referred to as 'Editor') without any configuration, because the Editor follows the CommonMark specification. 

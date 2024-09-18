@@ -7,7 +7,7 @@ ToastMark is a markdown parser extended from [commonmark.js](https://github.com/
 ## Differences from commonmark.js
 
 ### GitHub Flavored Markdown(GFM) Support
-commonmark.js is the reference implementation of [CommonMark](https://spec.commonmark.org/0.29/) and doesn't support [GFM](https://github.github.com/gfm/), which is extended markdown syntax based on CommonMark. ToastMark has its own implementation for supporting GFM.
+commonmark.js is the reference implementation of [CommonMark](https://spec.commonmark.org/0.31.2/) and doesn't support [GFM](https://github.github.com/gfm/), which is extended markdown syntax based on CommonMark. ToastMark has its own implementation for supporting GFM.
 
 ### Source Position Information
 Although commonmark.js provides source position information related with each node in AST(Abstract Syntax Tree), those are limited to block-level elements. ToastMark extended this feature to provide source position information for inline-level elements also.
