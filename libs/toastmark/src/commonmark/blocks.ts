@@ -18,7 +18,7 @@ import { frontMatter as frontMatterStart } from './frontMatter/frontMatterStart'
 
 const reHtmlBlockClose = [
   /./, // dummy for 0
-  /<\/(?:script|pre|style)>/i,
+  /<\/(?:script|pre|style|textarea)>/i,
   /-->/,
   /\?>/,
   />/,

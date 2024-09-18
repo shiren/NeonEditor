@@ -28,7 +28,7 @@ export interface BlockStart {
 const reCodeFence = /^`{3,}(?!.*`)|^~{3,}/;
 const reHtmlBlockOpen = [
   /./, // dummy for 0
-  /^<(?:script|pre|style)(?:\s|>|$)/i,
+  /^<(?:script|pre|style|textarea)(?:\s|>|$)/i,
   /^<!--/,
   /^<[?]/,
   /^<![A-Z]/,
