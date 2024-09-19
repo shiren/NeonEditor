@@ -414,7 +414,7 @@ function codeBlock(node) {
 
 ### 개행 추가
 
-일반적인 경우 최종적으로 변환된 HTML 문자열의 포맷에 신경 쓸 필요가 없다. 그러나 `ToastMark`는 [CommonMark Spec](https://spec.commonmark.org/0.29/)을 준수하기 때문에 개행을 제어하는 옵션을 지원해야만 한다.([공식 테스트 데이터](https://spec.commonmark.org/0.29/spec.json))
+일반적인 경우 최종적으로 변환된 HTML 문자열의 포맷에 신경 쓸 필요가 없다. 그러나 `ToastMark`는 [CommonMark Spec](https://spec.commonmark.org/0.31.2/)을 준수하기 때문에 개행을 제어하는 옵션을 지원해야만 한다.([공식 테스트 데이터](https://spec.commonmark.org/0.31.2/spec.json))
 
 컨버팅 함수의 토큰 객체에 `outerNewline`과 `innerNewline` 프로퍼티를 추가하여 개행을 제어할 수 있다.
 

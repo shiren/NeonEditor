@@ -2,7 +2,7 @@
 
 ## 자동 링크란 무엇일까?
 
-[자동 링크](https://spec.commonmark.org/0.29/#autolinks)는 CommonMark에 정의된 스펙이다. (자동 링크의 세부 사양을 알고 싶으면 위 링크의 예를 참조바란다.)
+[자동 링크](https://spec.commonmark.org/0.31.2/#autolinks)는 CommonMark에 정의된 스펙이다. (자동 링크의 세부 사양을 알고 싶으면 위 링크의 예를 참조바란다.)
 
 자동 링크는 `<`, `>` 사이에 위치한 절대 경로 URI 또는 이메일 주소이다. URL 또는 이메일 주소를 링크 레이블로 하여 구문 분석된다.
 

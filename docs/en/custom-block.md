@@ -1,6 +1,6 @@
 # 🔩 Custom Block Node And HTML Node
 
-The TOAST UI Editor (henceforth referred to as 'Editor') follows the [CommonMark](https://spec.commonmark.org/0.29/) specification, and also supports the [GFM](https://github.github.com/gfm/) specification. But what if you want to use a specific syntax that is not supported by CommonMark or GFM? For example, you might want to use [LaTeX](https://www.latex-project.org/) syntax or render elements such as charts in Markdown. The editor provides the option to define a **custom block node** for this usability.
+The TOAST UI Editor (henceforth referred to as 'Editor') follows the [CommonMark](https://spec.commonmark.org/0.31.2/) specification, and also supports the [GFM](https://github.github.com/gfm/) specification. But what if you want to use a specific syntax that is not supported by CommonMark or GFM? For example, you might want to use [LaTeX](https://www.latex-project.org/) syntax or render elements such as charts in Markdown. The editor provides the option to define a **custom block node** for this usability.
 
 ## Custom Block Node
 
@@ -56,7 +56,7 @@ In WYSIWYG Editor, the custom block node is rendered in the same result as a mar
 ## HTML Node
 
 CommonMark uses `<` and `>` characters to write nodes that are not supported by default in HTML text.
-([CommonMark Raw HTML Spec](https://spec.commonmark.org/0.29/#raw-html))
+([CommonMark Raw HTML Spec](https://spec.commonmark.org/0.31.2/#raw-html))
 
 Because Markdown Editor also follows these specifications, HTML text are rendered correctly in the Markdown preview.
 
