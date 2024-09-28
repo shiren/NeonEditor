@@ -64,19 +64,15 @@ export class Link extends Mark {
     return (payload) => (state, dispatch) => {
       const { linkUrl, linkText = '' } = payload!;
       const { schema, tr, selection } = state;
-      const { empty, from, to } = selection;
+      const { from, to } = selection;
 
-      if (from && to && linkUrl) {
+      if (from && to && linkUrl && linkText) {
         const attrs = { linkUrl };
         const mark = schema.mark('link', attrs);
 
-        if (empty && linkText) {
-          const node = createTextNode(schema, linkText, mark);
+        const node = createTextNode(schema, linkText, mark);
 
-          tr.replaceRangeWith(from, to, node);
-        } else {
-          tr.addMark(from, to, mark);
-        }
+        tr.replaceRangeWith(from, to, node);
 
         dispatch!(tr.scrollIntoView());
 
