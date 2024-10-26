@@ -215,7 +215,7 @@ const editor = new Editor({
     text({ literal }) {
       return {
         type: 'text',
-        content: node.literal
+        content: literal
       };
     }
   }
