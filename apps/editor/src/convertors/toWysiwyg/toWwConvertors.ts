@@ -21,6 +21,7 @@ import {
   getTextWithoutTrailingNewline,
   isInlineNode,
   isCustomHTMLInlineNode,
+  isCustomInline,
 } from './htmlToWwConvertors';
 
 import { ToWwConvertorMap } from '@t/convertor';
@@ -235,7 +236,10 @@ const toWwConvertors: ToWwConvertorMap = {
   tableCell(state, node, { entering }) {
     if (!(node as TableCellMdNode).ignored) {
       const hasParaNode = (childNode: MdNode | null) =>
-        childNode && (isInlineNode(childNode) || isCustomHTMLInlineNode(state, childNode));
+        childNode &&
+        (isInlineNode(childNode) ||
+          isCustomInline(childNode) ||
+          isCustomHTMLInlineNode(state, childNode));
 
       if (entering) {
         const { tableHeadCell, tableBodyCell, paragraph } = state.schema.nodes;

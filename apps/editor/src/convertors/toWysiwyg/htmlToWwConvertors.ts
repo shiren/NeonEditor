@@ -30,6 +30,10 @@ export function isInlineNode({ type }: MdNode) {
   return includes(['text', 'strong', 'emph', 'strike', 'image', 'link', 'code'], type);
 }
 
+export function isCustomInline(node: MdNode) {
+  return node.type === 'customInline';
+}
+
 function isSoftbreak(mdNode: MdNode | null) {
   return mdNode?.type === 'softbreak';
 }
